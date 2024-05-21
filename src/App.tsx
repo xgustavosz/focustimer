@@ -1,38 +1,21 @@
 import "./App.css";
 
-import { useState } from "react";
+import useLocalStorage from "use-local-storage";
 
-import reactLogo from "./assets/react.svg";
+import { Toggle } from "./components/Toggle/Toggle";
 
-import viteLogo from "/vite.svg";
-
-function App() {
-  const [count, setCount] = useState(0);
+export const App = () => {
+  const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDark, setIsDark] = useLocalStorage("isDark", preference);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
-}
+    <div className="App" data-theme={isDark ? "dark" : "light"}>
+      <Toggle handleChange={() => setIsDark(!isDark)} isChecked={isDark} />
 
-export default App;
+      <h1 className="title">Hello World!</h1>
+      <div className="box">
+        <h2>This is a box.</h2>
+      </div>
+    </div>
+  );
+};
