@@ -1,0 +1,21 @@
+.headerStyle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  color: var(--primary-text-color);
+  font-size: 40px;
+}
+
+.subTitle {
+  color: var(--secondary-text-color);
+  font-size: 20px;
+}
+
+.divButtons {
+  display: flex;
+  gap: 8px;
+}

@@ -8,14 +8,7 @@
     background-color: var(--background-color);
 }
 
-.title {
-    color: var(--primary-text-color);
-    margin-bottom: 50px;
-}
-
-.box {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--foreground-color);
-    color: var(--secondary-text-color);
+.container {
+    max-width: 1280px;
+    width: 100%;
 }

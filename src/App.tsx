@@ -2,7 +2,7 @@ import "./App.css";
 
 import useLocalStorage from "use-local-storage";
 
-import { Toggle } from "./components/Toggle/Toggle";
+import { Header } from "./components/Header/Header";
 
 export const App = () => {
   const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -10,11 +10,13 @@ export const App = () => {
 
   return (
     <div className="App" data-theme={isDark ? "dark" : "light"}>
-      <Toggle handleChange={() => setIsDark(!isDark)} isChecked={isDark} />
-
-      <h1 className="title">Hello World!</h1>
-      <div className="box">
-        <h2>This is a box.</h2>
+      <div className="container">
+        <Header
+          title="FocusTimer"
+          subTitle="Gerencie seu tempo de maneira mágica!"
+          colorSchemeChange={() => setIsDark(!isDark)}
+          isDark={isDark}
+        />
       </div>
     </div>
   );
