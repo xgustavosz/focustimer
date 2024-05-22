@@ -1,0 +1,35 @@
+.timerDiv {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.contentDiv {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+}
+
+.clockStyle {
+  color: #fff;
+}
+
+.timerButtonsDiv {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timerDiv:hover .contentDiv {
+  filter: blur(5px);
+}
+
+.timerDiv:hover .timerButtonsDiv {
+  opacity: 1;
+}

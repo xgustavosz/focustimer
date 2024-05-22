@@ -11,12 +11,14 @@
   --secondary-text-color: #666666;
   --background-settings-button-color: #F4F4F5;
   --background-settings-button-icon-color: #999999;
+  --border-color: #CCCCCC;
 }
 
 [data-theme='dark'] {
   --background-color: #18181b;
-  --primary-text-color: #cccccc;
+  --primary-text-color: #CCCCCC;
   --secondary-text-color: #999999;
   --background-settings-button-color: #27272A;
   --background-settings-button-icon-color: #666666;
+  --border-color: #27272A;
 }

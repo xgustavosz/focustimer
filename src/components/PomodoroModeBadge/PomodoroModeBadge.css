@@ -1,0 +1,35 @@
+.pomodoroModeBadgeDivFocus,
+.pomodoroModeBadgeDivShortPause,
+.pomodoroModeBadgeDivLongPause {
+    display: flex;
+    gap: 2.5px;
+    padding: 6px 8.5px;
+    border-radius: 8px;
+}
+
+.pomodoroModeBadgeDivFocus {
+    background-color: #84cc161A;
+    border: 2px solid #84cc16;
+}
+
+.pomodoroModeBadgeDivFocus p {
+    color: #84cc16;
+}
+
+.pomodoroModeBadgeDivLongPause {
+    background-color: #06B6D41A;
+    border: 2px solid #06B6D4;
+}
+
+.pomodoroModeBadgeDivLongPause p {
+    color: #06B6D4;
+}
+
+.pomodoroModeBadgeDivShortPause {
+    background-color: #F59E0B1A;
+    border: 2px solid #F59E0B;
+}
+
+.pomodoroModeBadgeDivShortPause p {
+    color: #F59E0B;
+}
